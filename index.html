@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>LNV_X90_IDP_Pro5_728x90</title>
-
-<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="LNV_X90_IDP_Pro5_728x90.js"></script>
-
 <script>
+var clickTag = "https://www.lenovo.com/sg/en/";
+
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 
 function init() {
@@ -54,18 +46,9 @@ function handleComplete(evt, comp) {
     AdobeAn.compositionLoaded(lib.properties.id);
     fnStartAnimation();
 
-    // 🔹 Thêm sự kiện click vào canvas
+    // 🔹 Thêm sự kiện click với GDN clickTag
     canvas.addEventListener("click", function() {
-        window.open("https://www.lenovo.com/sg/en/", "_blank");
+        window.open(clickTag, "_blank");
     });
 }
 </script>
-</head>
-<body onload="init();" style="margin:0px;">
-    <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:728px; height:90px; position:relative; cursor: pointer;">
-        <canvas id="canvas" width="728" height="90" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-        <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:728px; height:90px; position: absolute; left: 0px; top: 0px; display: block;">
-        </div>
-    </div>
-</body>
-</html>
